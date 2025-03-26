@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+    --c1: #330000;
+    --c2: #cc5500;
+    --c3: #fbde03;
+    --c4: #fff9eb;
+    --t1: rgba(0, 0, 0, 0.3);
+    --t2: rgba(0, 0, 0, 0.7);
+}
+
+body {
+    background-color: var(--c4);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header,
+footer {
+    background-color: #17b9a4;
+    color: var(--c4);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    & button {
+        background-color: var(--c3);
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px var(--t2);
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+main {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c8a50;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--t2);
+    gap: 10px;
+
+    & img {
+        max-width: 250px;
+    }
+
+    & button {
+        background-color: var(--c3);
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px var(--t2);
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--t2);
+}
+
+.janela {
+    width: 40%;
+    height: fit-content;
+    background-color: var(--c4);
+    box-shadow: 0 0 5px var(--t1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    & div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    & button {
+        width: fit-content;
+        background-color: var(--c3);
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px var(--t2);
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    & form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+input{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--t2);
+    font-weight: bold;
+    width: 95%;
+}
+
+.oculto{
+    display: none;
+}
+
+@media screen and (max-width: 770px){
+    .janela{
+        min-width: 90%;
+    }
+}
